@@ -1,11 +1,6 @@
-# DSA-with-C-plus
-My personal journey of mastering Data Structures and Algorithms (DSA) using C++, with well-structured codes and problem-solving approaches.
-
----
-
 # 🚀 DSA with C-plus
 
-A structured collection of **Data Structures and Algorithms (DSA)** implemented in **C++**, designed for mastering problem-solving skills and preparing for coding interviews.
+My personal journey of mastering **Data Structures and Algorithms (DSA)** using **C++**, with well-structured codes and problem-solving approaches.
 
 ---
 
@@ -31,6 +26,9 @@ This repository contains my personal journey of learning and practicing DSA usin
 - Strings
 - Recursion
 - Bit Manipulation
+- Patterns
+
+##
 
 ### 🔹 Data Structures
 - Linked List
@@ -41,6 +39,8 @@ This repository contains my personal journey of learning and practicing DSA usin
 - Heaps (Priority Queue)
 - Graphs
 
+##
+
 ### 🔹 Algorithms
 - Searching (Binary Search)
 - Sorting (Bubble, Selection, Merge, Quick Sort)
@@ -48,6 +48,8 @@ This repository contains my personal journey of learning and practicing DSA usin
 - Two Pointer Technique
 - Greedy Algorithms
 - Backtracking
+
+##
 
 ### 🔹 Advanced Topics
 - Dynamic Programming (DP)
