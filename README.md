@@ -2,6 +2,8 @@
 
 My personal journey of mastering **Data Structures and Algorithms (DSA)** using **C++**, with well-structured codes and problem-solving approaches.
 
+<img src="https://res.cloudinary.com/dcuziuhqp/image/upload/v1775489063/ChatGPT_Image_Apr_6_2026_08_53_40_PM_x1nzxb.png" alt="DSA with C++">
+
 ---
 
 ## 📌 About This Repository
