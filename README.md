@@ -61,9 +61,8 @@ This repository contains my personal journey of learning and practicing DSA usin
 ---
 
 ## 📂 Folder Structure
-
+```
 DSA with C++/
-|
 ├── C++ Containers/
 ├── Pattern/
 ├── Bitwise Operators/
@@ -80,3 +79,4 @@ DSA with C++/
 ├── String/
 ├── LICENSE/
 └── README.md
+```
