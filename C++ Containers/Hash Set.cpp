@@ -108,6 +108,11 @@ Properties:
     5. Hash Set ? DS built on hash table (stores unique keys).
     6. Hash Set almost looks like Hash Table, only difference is uniqueness. Stores only UNIQUE keys or UNIQUE values.
 
+-------------------------------------------------------
+
+unordered_set == Hash Set
+
+-------------------------------------------------------
 
 "unordered" = not sorted
 "set" = sorted

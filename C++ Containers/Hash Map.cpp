@@ -117,4 +117,8 @@ Pair:
 		p.first   ? key (string)
 		p.second  ? value (int)
 
+-----------------------------------------------------------
+
+unordered_map == Hash Map
+
 */
