@@ -63,20 +63,20 @@ This repository contains my personal journey of learning and practicing DSA usin
 ## 📂 Folder Structure
 
 DSA with C++/
-  |
-  ├── C++ Containers/
-  ├── Pattern/
-  ├── Bitwise Operators/
-  ├── Time&Space Complexity/
-  ├── Structure/
-  ├── Number System Conversion/
-  ├── Array/
-  ├── Linked List/
-  ├── Queue/
-  ├── Tree/
-  ├── Graph/
-  ├── Dynamic Programming (DP)/
-  ├── Sorting Algorithms/
-  ├── String/
-  ├── LICENSE/
-  └── README.md
+|
+├── C++ Containers/
+├── Pattern/
+├── Bitwise Operators/
+├── Time&Space Complexity/
+├── Structure/
+├── Number System Conversion/
+├── Array/
+├── Linked List/
+├── Queue/
+├── Tree/
+├── Graph/
+├── Dynamic Programming (DP)/
+├── Sorting Algorithms/
+├── String/
+├── LICENSE/
+└── README.md
