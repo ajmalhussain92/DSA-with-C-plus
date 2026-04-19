@@ -50,16 +50,16 @@ int main () {
 /*
 
 Adjacency List Concept:
-	? Instead of a matrix, each vertex stores a list of its neighbors.
-	? Efficient for sparse graphs.
+	Instead of a matrix, each vertex stores a list of its neighbors.
+	Efficient for sparse graphs.
 
 ------------------------------
 
 Adjacency List:
-0 ? 1, 2  
-1 ? 0, 3  
-2 ? 0  
-3 ? 1
+0 -> 1, 2  
+1 -> 0, 3  
+2 -> 0  
+3 -> 1
 
 ------------------------------
 
@@ -69,7 +69,7 @@ For Directed Graph:
 ------------------------------
 
 Traversal (BFS/DFS) is easier and faster
-Space Complexity: O(V + E) ? (better than matrix)
+Space Complexity: O(V + E) (better than matrix)
 
 ------------------------------
 
