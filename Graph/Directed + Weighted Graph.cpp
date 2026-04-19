@@ -12,7 +12,7 @@ for (int i = 0; i < 5; i++) {
     }
 }
 
-// Add directed weighted edge u ? v
+// Add directed weighted edge u -> v
 adjMatrix[u][v] = weight;
 
 
