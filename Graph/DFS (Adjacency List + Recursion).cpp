@@ -3,42 +3,55 @@
 using namespace std;
 
 class Graph {
-    int V;
-    vector<vector<int>> adj;
+    int vertices;
+    vector<vector<int>> adjList;
+    vector<bool> visited;
 
 public:
     Graph (int v) {
-        V = v;
-        adj.resize(V);
+        vertices = v;
+        adjList.resize (v);
+        visited.resize (v, false);
     }
-
+    
     void addEdge (int u, int v) {
-        adj[u].push_back(v);
-        adj[v].push_back(u); // remove for directed
+        adjList[u].push_back(v);
+        adjList[v].push_back(u);            // remove for directed
     }
-
-    void dfs (int node, vector<bool>& visited) {
+    
+    void display () {
+        for (int i = 0; i < vertices; i++) {
+            cout << i << " : ";
+            for (auto j : adjList[i]) {
+                cout << j << " ";
+            }
+            cout << endl;
+        }
+    }
+    
+    void dfsList (int node) {
         visited[node] = true;
         cout << node << " ";
 
-        for (int neighbor : adj[node]) {
+        for (int neighbor : adjList[node]) {
             if (!visited[neighbor]) {
-                dfs (neighbor, visited); // recursion (backtracking)
+                dfsList (neighbor);         // recursion (backtracking)
             }
         }
-    }
-
-    void startDFS () {
-        vector<bool> visited (V, false);
-        dfs (0, visited); // start from node 0
     }
 };
 
 int main () {
-    Graph g (4);
-    g.addEdge (0, 1);
-    g.addEdge (0, 2);
-    g.addEdge (1, 3);
-
-    g.startDFS ();
+	Graph g(4);
+	g.addEdge (0, 1);
+	g.addEdge (0, 2);
+	g.addEdge (1, 3);
+	
+	cout << "\nGraph using Adjacency List: \n";
+    g.display ();
+    
+    cout << "\nDFS Traversal: \n";
+    g.dfsList(0);               // start from node 0
+    
+	return 0;
 }
