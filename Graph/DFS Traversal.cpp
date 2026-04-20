@@ -57,7 +57,7 @@ DFS (Depth-First Search) in a graph is similar to pre-order traversal of a tree,
 -----------------------------------------------------
 
 Core Idea of DFS:
-	Go as deep as possible ? then backtrack
+	Go as deep as possible -> then backtrack
 
 -----------------------------------------------------
 
@@ -73,9 +73,9 @@ Graph Representation (How the graph is stored)
 
 -----------------------------------------------------
 
-Combine Them ? 4 Possible Variants:
+Combine Them -> 4 Possible Variants:
 
-	Adjacency Matrix 	? 	Recursion (Backtracking), Stack (Iterative)
-	Adjacency List 		?	Recursion (Backtracking), Stack (Iterative)
+	Adjacency Matrix 	-> 	Recursion (Backtracking), Iterative (Stack)
+	Adjacency List 		->	Recursion (Backtracking), Iterative (Stack)
 
 */

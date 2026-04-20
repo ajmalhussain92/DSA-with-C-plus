@@ -2,6 +2,8 @@
 #include <vector>
 using namespace std;
 
+/* DFS (Adjacency List + DFS Recursion) */
+
 class Graph {
     int vertices;
     vector<vector<int>> adjList;
@@ -29,9 +31,10 @@ public:
         }
     }
     
+    // DFS Recursion (Adjacency List)
     void dfsList (int node) {
-        visited[node] = true;
         cout << node << " ";
+        visited[node] = true;
 
         for (int neighbor : adjList[node]) {
             if (!visited[neighbor]) {
@@ -51,7 +54,7 @@ int main () {
     g.display ();
     
     cout << "\nDFS Traversal: \n";
-    g.dfsList(0);               // start from node 0
+    g.dfsList(0);               			// start from node 0
     
 	return 0;
 }
