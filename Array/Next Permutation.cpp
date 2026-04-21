@@ -1,4 +1,4 @@
-void nextPermutation(vector<int>& nums) {
+void nextPermutation (vector<int>& nums) {
     int n = nums.size();
     int i = n - 2;
 
@@ -13,11 +13,11 @@ void nextPermutation(vector<int>& nums) {
         while (nums[j] <= nums[i]) {
             j--;
         }
-        swap(nums[i], nums[j]);
+        swap (nums[i], nums[j]);
     }
 
     // Step 3: reverse right part
-    reverse(nums.begin() + i + 1, nums.end());
+    reverse (nums.begin() + i + 1, nums.end());
 }
 
 /*
@@ -28,14 +28,14 @@ Next Permutation: (Standard Algorithm)
 			Find index i such that: arr[i] < arr[i+1]
 			This is called the pivot
 	
-	Step 2: Find just greater element on right
+	Step 2: Find just greater element from right (n - 1)
 			From the right side, find element just greater than arr[i]
 	
 	Step 3: Swap them
 	
-	Step 4: Reverse the right part (i+1 ? end)
+	Step 4: Reverse the right part (from i+1 to end)
 	
-
+	
 	Examples:
 		i) 1 2 3 -> pivot = 2, 1 3 2 (swap) -> 1 2 3 (no reverse, right part already sorted) -> Final = 1 2 3 
 		
