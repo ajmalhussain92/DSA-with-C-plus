@@ -4,7 +4,7 @@ using namespace std;
 
 #define SIZE 10
 
-vector<vector<pair<string, int>>> hash_map (SIZE);          // Chaining
+vector<vector<pair<string, int>>> hash_map (SIZE);  // Chaining
 
 // Hash function
 int hash_function (string value) {
@@ -12,7 +12,7 @@ int hash_function (string value) {
     for (char c : value)
         sum += int (c);
 
-    return sum % SIZE;							// hash code
+    return sum % SIZE;								// hash code
 }
 
 // Add
@@ -90,15 +90,53 @@ int main () {
 /*
 Hash Map structure:
 
-	Index:				  0				1				2				3				4
-	key - value:
-		           [ alis : 123 ]  [ sam : 786 ]   [ bob : 415 ]   [ jon : 239 ]   [ ram : 675 ]
-		           [ johny : 123 ] [ mac : 900 ]      			   [ don : 139 ]
-																   [ xavier : 939 ]
+Example1: 	unordered_map<int, string> mp;
 
+	key		:	value
+	------------------
+	123		:	alis
+	786		:	sam
+	415		:	bob
+
+
+Example2: 	unordered_map<string, int> mp;
+
+	key		:	value
+	------------------
+	alis	:	123
+	sam 	:	786 
+	bob 	:	415 
+
+
+Example3: 	unordered_map<char, bool> mp;
+
+	key		:	value
+	------------------
+	'Y'		:	true
+	'N' 	:	false 
+	'Y' 	:	true
+
+
+Example4: 	unordered_map<int, int> mp;
+
+	key		:	value
+	------------------
+	123		:	0
+	786		:	1
+	415		:	2
+
+---------------------------------------------------------------------------------
+What does find() return?
+
+find(key) returns an iterator:
+
+If key is found -> iterator pointing to that key-value pair.
+If key is not found -> mp.end().
+
+---------------------------------------------------------------------------------
 Key Value rules:
 	1. Order: key:value
-	
+
 	2. Always: 
 		Key comes first					(first will be assumed as "key")
 		Value comes second				(second will be assumed as "value")

@@ -27,7 +27,7 @@ int main () {
 	int n = 5;
 	int nums[n] = {1, 2, 2, 5, 7};
 	
-	int k = removeDuplicates(nums, n);
+	int k = removeDuplicates (nums, n);
 	
 	cout << k << endl;
 	

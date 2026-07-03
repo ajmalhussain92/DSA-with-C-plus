@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-//  Best Approach - Prefix Sum and Suffix Sum - O(n) Time and O(1) Space
+// Best Approach - Prefix Sum and Suffix Sum - O(n) Time and O(1) Space
 int equilibriumIndex (vector<int>& arr) {
     int n = arr.size();
     

@@ -19,7 +19,7 @@ bool findSubarrays (vector<int>& nums) {
 }
 
 int main () {
-	vector<int> arr = {4,2,4};
+	vector<int> arr = {4, 2, 4};
 
 	cout << findSubarrays (arr);
 }
