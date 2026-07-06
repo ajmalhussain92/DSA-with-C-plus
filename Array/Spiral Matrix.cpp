@@ -34,9 +34,7 @@ vector<int> spirallyTraverse (vector<vector<int>>& mat) {
 
 		// Check if the next cell is within bounds and not
 		// visited
-		if (0 <= newR && newR < rows &&
-			0 <= newC && newC < cols &&
-			!visited[newR][newC]) {
+		if (0 <= newR && newR < rows && 0 <= newC && newC < cols && !visited[newR][newC]) {
 
 			// Move to the next row
 			r = newR;

@@ -27,7 +27,7 @@ int maxSubarraySum (vector<int> &arr) {
 int maxSubarraySum (vector<int> &arr) {
     int n = arr.size();
     
-    int maxSum = arr[0];                // Global maximum sum found so far
+    int maxSum = arr[0];                			// Global maximum sum found so far
     int maxEnd = arr[0];
     
     for (int i = 1; i < n; i++) {
