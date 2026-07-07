@@ -35,15 +35,15 @@ int longestSubarray (vector<int>& arr, int k) {
 
 		// Case 1: Subarray from index 0 to i
 		if (prefSum == k)
-			longest = max(longest, i + 1);
+			longest = max (longest, i + 1);
 
 		// Case 2: Subarray ending at i with sum k
-		if (mp.find(prefSum - k) != mp.end()) {
+		if (mp.find (prefSum - k) != mp.end()) {
 			longest = max(longest, i - mp[prefSum - k]);
 		}
 
 		// Store FIRST occurrence only
-		if (mp.find(prefSum) == mp.end()) {
+		if (mp.find (prefSum) == mp.end()) {
 			mp[prefSum] = i;
 		}
 	}
