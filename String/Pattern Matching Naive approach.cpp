@@ -34,7 +34,7 @@ int main () {
 /*
 
 Time complexity: O(n x m)
-	
+
 	where,
 	n = length of text
 	m = length of pattern
