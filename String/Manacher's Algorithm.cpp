@@ -20,11 +20,12 @@ public:
 	}
 	
 	// 2. Radius array
-	int n = ms.size();
-	vector<int> p(n, 0);
+	vector<int> p;
 	
 	// 3. The clever observation
 	void runManacher () {
+		int n = ms.size();
+		p.assign(n, 0);
 		int left = 0, right = 0;
 
 		// Main loop
@@ -44,7 +45,8 @@ public:
 			}
 		}
 	}
-
+	
+	// Returns that radius in O(1) time.
 	int getLongest (int center, int odd) {
 		int pos = 2 * center + 2 + !odd;
 		return p[pos];
@@ -87,6 +89,7 @@ int main () {
 Manacher's Algorithm
 	-> Manacher's Algorithm is an advanced string algorithm used to find Longest Palindromic Substring in linear time.
 	-> Find the Longest Palindromic Substring (and the palindrome radius at every position) in O(n) time.
+	-> Minimum characters to add at the FRONT to make the string a palindrome.
 	-> It was invented by Glenn K. Manacher in 1975.
 
 
@@ -126,6 +129,14 @@ Steps:
 
 			mirror is the position symmetric to i about the center of the current longest palindrome
 
+--------------------------------------------------------------
+Why + !odd?
+
+	Odd palindrome centers are letters.
+	Even palindrome centers are the # between letters.
+
+Odd palindrome (odd = 1) → add 0 because its center is a character.
+Even palindrome (odd = 0) → add 1 because its center is the # immediately after that character in the transformed string.
 
 --------------------------------------------------------------
 Problems:

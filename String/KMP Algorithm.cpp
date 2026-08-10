@@ -111,5 +111,33 @@ Explanation: The string "ab" occurs twice in txt, first occurrence starts from i
 
 Input: txt=  "aabaacaadaabaaba", pat =  "aaba"
 Output: [0, 9, 12]
+------------------------------------------------------
+LPS = Longest Prefix Suffix
+
+Prefix: A prefix must start from index 0
+Suffix: A suffix must end at the last index
+
+Example 1:
+Pattern: a b a b a b
+
+Prefix   Suffix
+------   ------
+a        b     
+ab       ab    
+aba      bab   
+abab     abab   
+ababa    babab  
+
+
+Example 2:
+Pattern: a j m a l
+
+Prefix   Suffix
+------   ------
+a        l     
+aj       al    
+ajm      mal  
+ajma     jmal   
+
 
 */

@@ -9,7 +9,7 @@ int countSubarrays (vector<int>& arr, int k) {
 
 	unordered_map<int, int> mp;
 
-	int count = 0;
+	int freq = 0;
 	int prefSum = 0;
 
 	for (int i = 0; i < arr.size(); i++) {
@@ -17,15 +17,15 @@ int countSubarrays (vector<int>& arr, int k) {
 		prefSum += arr[i];
 
 		if (prefSum == k)
-			count++;
+			freq++;
 
 		if (mp.find(prefSum - k) != mp.end())
-			count += mp[prefSum - k];
+			freq += mp[prefSum - k];
 
 		mp[prefSum]++;
 	}
 
-	return count;
+	return freq;
 }
 
 int main () {
@@ -34,16 +34,3 @@ int main () {
 
 	cout << countSubarrays (arr, k);
 }
-
-/*
-
-
-Hash Map stores:
-	Frequency of prefix sum
-
-Lookup:
-	prefSum - k
-
-
-
-*/

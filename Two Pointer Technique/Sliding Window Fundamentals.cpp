@@ -4,12 +4,12 @@
 int left = 0;
 
 // Variables needed
-// int sum = 0;
+// int windowSum = 0;
 
 for (int right = 0; right < n; right++) {
 
     // 1. Expand the window
-    // sum += arr[right];
+    // windowSum += arr[right];
 
     // 2. Window reached size k
     if (right - left + 1 == k) {
@@ -17,7 +17,7 @@ for (int right = 0; right < n; right++) {
         // Process the current window
 
         // 3. Slide the window
-        // sum -= arr[left];
+        // windowSum -= arr[left];
         left++;
     }
 }

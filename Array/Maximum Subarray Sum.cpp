@@ -42,7 +42,6 @@ int maxSubarraySum (vector<int> &arr) {
 }
 
 int main () {
-	
     vector<int> arr = {2, 3, -8, 7, -1, 2, 3};
     
     int res = maxSubarraySum (arr);

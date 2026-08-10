@@ -6,7 +6,6 @@ using namespace std;
 int main () {
 	vector<string> words = {"mass","as","hero","superhero","leetcode","et","code"};
 
-
 	vector<string> found;
 
 	for (int i = 0; i < words.size(); i++) {

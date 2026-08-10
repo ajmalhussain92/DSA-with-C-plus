@@ -126,6 +126,10 @@ Example4: 	unordered_map<int, int> mp;
 	415		:	2
 
 ---------------------------------------------------------------------------------
+
+Note:- A hash map stores exactly one value for each unique key.
+
+---------------------------------------------------------------------------------
 What does find() return?
 
 find(key) returns an iterator:
@@ -147,7 +151,7 @@ Key Value rules:
 
 	4. Key can be any types: int, char, string, ...
 	5. Hash code is computed for the KEY.
-	6. Key ? must be UNIQUE, Value ? can be DUPLICATE.
+	6. Key  = must be UNIQUE, Value = can be DUPLICATE.
 
 Pair:
 	pair<string, int> p;

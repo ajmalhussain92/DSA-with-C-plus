@@ -18,7 +18,7 @@ int secondLargest (vector<int>& nums) {
     return -1;
 }
 
-// Two Pass Search
+// Two Pass Search | Time: O(n), Space: O(1),
 int secondLargest (vector<int>& nums) {
     int n = nums.size();
     
@@ -26,15 +26,13 @@ int secondLargest (vector<int>& nums) {
     int secondLargest = -1;
     
     // 1st Pass	-> find largest element
-    for (int i = 0; i < n; i++) {
-        largest = max (largest, nums[i]);
-    }
+    for (int x : nums)
+        largest = max (largest, x);
     
     // 2nd Pass -> find secondLargest element
-    for (int i = 0; i < n; i++) {
-        if (nums[i] > secondLargest && nums[i] != largest) 
-            secondLargest = nums[i];
-    }
+    for (int x : nums) 
+        if (x > secondLargest && x != largest) 
+            secondLargest = x;
     
     return secondLargest;
 }

@@ -7,11 +7,11 @@ using namespace std;
 int subarraysDivByK (vector<int>& nums, int k) {
 	int n = nums.size();
 
+	int count = 0;
+	int prefSum = 0;
+	
 	unordered_map<int, int> mp;
 	mp[0] = 1;                      // Empty prefix
-
-	int prefSum = 0;
-	int count = 0;
 
 	for (int num : nums) {
 

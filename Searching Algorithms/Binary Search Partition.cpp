@@ -61,5 +61,8 @@ Required conditions:
 	1. Works on two sorted arrays. 
 	2. Both arrays must be sorted in the same order.
 	3. The arrays can even be empty, as long as the other array contains the kth element
+-------------------------------------------------------------------------
+int low = max(0, k - m);
+int high = min(k, n);
 
 */
