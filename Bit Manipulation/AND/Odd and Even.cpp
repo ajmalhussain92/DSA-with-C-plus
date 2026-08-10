@@ -15,6 +15,7 @@ int main () {
 
 /*
 
-
+Every even number has 0 in the last bit.
+Every odd number has 1 in the last bit.
 
 */

@@ -4,22 +4,20 @@
 using namespace std;
 
 int missingNum (vector<int>& arr) {
-    int n = arr.size() + 1;
-    
-    int xor1 = 0;
-    int xor2 = 0;
+	int size = arr.size();      // current array size
+	int n = size + 1;           // original size
 
-    // XOR all array elements
-    for (int i = 0; i < n - 1; i++) {
-        xor1 ^= arr[i];
-    }
+	int xor1 = 0, xor2 = 0;
 
-    // XOR all numbers from 1 to n
-    for (int i = 1; i <= n; i++) {
-        xor2 ^= i;
-    }
+	// XOR all array elements
+	for (int x : arr)
+		xor1 ^= x;
 
-    return xor1 ^ xor2;
+	// XOR all numbers from 1 to n
+	for (int i = 1; i <= n; i++) 
+		xor2 ^= i;
+
+	return xor1 ^ xor2;
 }
 
 int main () {
@@ -31,6 +29,8 @@ int main () {
 }
 
 /*
+
+Note: XOR works for only one missing number
 
 The array has only one repetitive element. Find the repetitive element.
 
