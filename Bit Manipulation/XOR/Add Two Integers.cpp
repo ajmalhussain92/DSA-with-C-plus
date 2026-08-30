@@ -22,13 +22,13 @@ int main () {
 
 /*
 
-So:
+Add two integers without using the + operator
 
-^ = sum without carry
-& = carry generator
-<< 1 = move carry to the next bit
+	a ^ b 		 = adds bits without carry
+	(a & b) << 1 = calculates the carry
 
-Repeat until there are no more carries.
+
+Repeat until there is no carry.
 
 
 

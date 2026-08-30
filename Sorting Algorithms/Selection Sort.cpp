@@ -1,17 +1,15 @@
 
 void selectionSort (int arr[], int n) { 
-    for (int i = 0; i < n - 1; i++) {
-        int min = i;
-        
-        for (int j = i + 1; j < n; j++) {
-            if (arr[min] > arr[j]) {
-                min = j;    // min update
-            }
-        }
-        
-        if (min != i)
-            swap (arr[i], arr[min]);    // swap
-    }
+	for (int i = 0; i < n - 1; i++) {
+		int minIndex = i;
+
+		for (int j = i + 1; j < n; j++) {
+			if (arr[j] < arr[minIndex]) 
+				minIndex = j;
+		}
+
+		swap (arr[i], arr[minIndex]);
+	}
 } 
 
 /*
@@ -25,12 +23,13 @@ Working Principle:
 	4. Move to the next position	:	Now, consider the next position as part of the sorted section
 	5. Repeat						: 	Continue this process for each position in the list until the entire list is sorted
 
-Time Complexity: 
-	Best/Average/Worst case: O(n²)
-	
-It performs well for small datasets.
+Time Complexity:
+	Worst					: 	O(n²)
+	Average					: 	O(n²)
+	Best (already sorted)	: 	O(n²)
 
-Principle:
-	
+Selection Sort: Best = Average = Worst = O(n²)
+
+It performs well for small datasets.
 
 */

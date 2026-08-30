@@ -18,7 +18,7 @@ int kthElement (vector<int>& a, vector<int>& b, int k) {
     int high = n;
 
     while (low <= high) {
-
+    	
         int cutA = (low + high) / 2;
         int cutB = k - cutA;
 
@@ -57,6 +57,9 @@ int main () {
 
 /*
 
+Find kth element in two sorted arrays:
+	Binary Search on Partition
+
 Required conditions:
 	1. Works on two sorted arrays. 
 	2. Both arrays must be sorted in the same order.
@@ -64,5 +67,20 @@ Required conditions:
 -------------------------------------------------------------------------
 int low = max(0, k - m);
 int high = min(k, n);
+
+-------------------------------------------------------------------------
+Steps:
+Step 1: Always binary-search the smaller array
+
+Step 2: Calculate the partition
+
+Step 3: Get the four boundary elements
+
+Step 4: Check whether the partition is correct
+
+Step 5: Decide which direction binary search goes
+-------------------------------------------------------------------------
+Time	= O(log(min(n, m))) 		or	 simply O(log n)
+Space	= O(1)
 
 */
