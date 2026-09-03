@@ -3,37 +3,28 @@
 #include <algorithm>
 using namespace std;
 
-vector<vector<int>> insert (vector<vector<int>>& intervals, vector<int>& newInterval) {
-    // sort (START)
-//    sort (intervals.begin(), intervals.end()); // This problem already guarantees intervals are sorted.
+vector<vector<int>> insertAndMerge (vector<vector<int>>& intervals, vector<int>& newInterval) {
+    sort (intervals.begin(), intervals.end());
     
-    vector<vector<int>> result;
+    int n = intervals.size();
+    vector<vector<int>> ans;
     
     int i = 0;
-    int n = intervals.size();
+    while (i < n && intervals[i][1] < newInterval[0])
+        ans.push_back (intervals[i++]);
     
-    // 1. Add intervals before Overlap
-    while (i < n && intervals[i][1] < newInterval[0]) {
-        result.push_back (intervals[i]);
-        i++;
-    }
-    
-    // 2. Merge Overlaps
     while (i < n && intervals[i][0] <= newInterval[1]) {
         newInterval[0] = min (newInterval[0], intervals[i][0]);
         newInterval[1] = max (newInterval[1], intervals[i][1]);
         i++;
     }
     
-    result.push_back (newInterval);
+    ans.push_back (newInterval);
     
-    // 3. Add remaining intervals
-    while (i < n) {
-        result.push_back (intervals[i]);
-        i++;
-    }
+    while (i < n)
+        ans.push_back (intervals[i++]);
     
-    return result;
+    return ans;
 }
 
 int main () {
@@ -47,7 +38,7 @@ int main () {
     
     vector<int> newInterval = {4,8};
     
-    vector<vector<int>> res = insert (intervals, newInterval);
+    vector<vector<int>> res = insertAndMerge (intervals, newInterval);
     
     for (auto &row : res) {
         for (auto &val : row) {

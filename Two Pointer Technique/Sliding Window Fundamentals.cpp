@@ -28,21 +28,21 @@ for (int right = 0; right < n; right++) {
 int left = 0;
 
 // Any data structure or variable needed
-// int sum = 0;
+// int windowSum = 0;
 // unordered_map<char, int> freq;
 
 for (int right = 0; right < n; right++) {
 	
     // 1. Expand the window
     // Include arr[right]
-    // sum += arr[right];
+    // windowSum += arr[right];
     // freq[arr[right]]++;
 
     // 2. Shrink the window until it becomes valid
     while (/* window is invalid */) {
     	
         // Remove arr[left]
-        // sum -= arr[left];
+        // windowSum -= arr[left];
         // freq[arr[left]]--;
 
         left++;

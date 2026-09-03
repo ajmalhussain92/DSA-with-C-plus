@@ -75,12 +75,12 @@ Core Logic:
 		remove   = [2,4]
 
 		Left survives:
-		
+	
 		[0,2]
 		Case 3: Right part survives
-		
+	
 		Same example:
-		
+	
 		[4,5]
 		also survives.
 

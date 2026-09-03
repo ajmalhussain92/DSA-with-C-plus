@@ -10,23 +10,21 @@ vector<vector<int>> merge (vector<vector<int>>& intervals) {
     
     // 1. Sort by START
     sort (intervals.begin(), intervals.end());
+
+	vector<vector<int>> ans;
+	
+	for (auto &interval : intervals) {
+	
+	    if (ans.empty() || interval[0] > ans.back()[1]) 
+	        // No overlap
+	        ans.push_back (interval);
+
+	    else 
+	        // Overlap
+	        ans.back()[1] = max (ans.back()[1], interval[1]);
+	}
     
-    vector<vector<int>> result;
-    
-    // 2. Pick first
-    result.push_back (intervals[0]);
-    
-    // 3. Compare adjacent overlapping intervals & merge
-    for (int i = 1; i < intervals.size(); i++) {
-        if (result.back()[1] >= intervals[i][0]) 
-        	// Overlapping -> merge
-            result.back()[1] = max (result.back()[1], intervals[i][1]);
-        else
-        	// No overlapping -> add in result
-            result.push_back (intervals[i]);
-    }
-    
-    return result;
+    return ans;
 }
 
 int main () {
