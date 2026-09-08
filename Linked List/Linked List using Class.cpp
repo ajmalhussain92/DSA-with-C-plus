@@ -19,6 +19,8 @@ private:
 public:
 	LinkedList () : head (nullptr) {}
 
+//	=================== Insertion ====================
+
 	void push_front (int data) {
         ListNode* newNode = new ListNode(data);
         
@@ -83,6 +85,37 @@ public:
 
 		// Attach new node after last node
 		ptr->next = newNode;
+	}
+	
+//	=================== Deletion ====================
+	
+	void pop_middle (int pos){
+	    if (head == nullptr){
+	        cout << "empty, can't delete\n";
+	        return;
+	    }
+	    
+	    ListNode* ptr = head;
+	    
+	    if (pos == 1){
+	        ptr = ptr->next;
+	        delete head;
+	        head = ptr;
+	        return;
+	    }
+	    
+	    for (int i = 1; i < pos-1; i++) {
+	        ptr = ptr->next;
+	        
+	        if (ptr == nullptr || ptr->next == nullptr) {
+				cout << "Out of bounds!\n";
+				return;
+			}
+	    }
+	    
+	    ListNode* temp = ptr->next;
+	    ptr->next = temp->next;
+	    delete temp;
 	}
 
 	void display () {
